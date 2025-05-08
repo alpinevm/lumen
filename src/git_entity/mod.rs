@@ -13,7 +13,7 @@ pub enum GitEntity {
     Diff(Diff),
 }
 
-pub const GIT_DIFF_EXCLUSIONS: [&str; 7] = [
+pub const GIT_DIFF_EXCLUSIONS: [&str; 8] = [
     "--", // Separator for pathspecs
     ".",  // Include everything
     ":(exclude)package-lock.json",
@@ -21,6 +21,7 @@ pub const GIT_DIFF_EXCLUSIONS: [&str; 7] = [
     ":(exclude)pnpm-lock.yaml",
     ":(exclude)Cargo.lock",
     ":(exclude)node_modules/**",
+    ":(exclude)**.json",
 ];
 
 impl GitEntity {
